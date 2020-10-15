@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+  <!--
+  Example job implementation using ClusteredExecuter. The ExampleJob class should extend the ClusteredExecuter class.
+  <bean id="ExampleJobDetail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+    <property name="jobClass" value="com.example.ExampleJob" />
+    <property name="jobDataAsMap">
+      <map>
+        <entry key="repositoryState">
+          <ref bean="repositoryState" />
+        </entry>
+        <entry key="transactionService">
+          <ref bean="transactionService" />
+        </entry>
+        <entry key="jobLockService">
+          <ref bean="jobLockService" />
+        </entry>
+      </map>
+    </property>
+  </bean>
+  <bean id="ExampleJobAccessor" class="org.alfresco.schedule.AlfrescoSchedulerAccessorBean">
+    <property name="scheduler" ref="schedulerFactory" />
+    <property name="enabled" value="${example.job.enabled}" />
+    <property name="triggers">
+      <list>
+        <bean id="ExampleJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+          <property name="cronExpression" value="${example.job.cron}" />
+          <property name="jobDetail" ref="ExampleJobDetail" />
+        </bean>
+      </list>
+    </property>
+  </bean>
+  -->
+</beans>
