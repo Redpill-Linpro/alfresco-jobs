@@ -26,7 +26,7 @@ Import the jar in your project by adding the Redpill Linpro repository and depen
     <dependency>
         <groupId>org.redpill-linpro.alfresco.module</groupId>
         <artifactId>alfresco-jobs</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </dependency>
 ...
 </dependencies>
