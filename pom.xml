@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.redpill-linpro.alfresco.module</groupId>
   <artifactId>alfresco-jobs</artifactId>
-  <version>1.0.3-SNAPSHOT</version>
+  <version>1.0.3</version>
   <name>Redpill Linpro - Alfresco jobs module</name>
   <description>Alfresco Jobs Platform/Repository JAR Module which helps with running Alfresco Jobs</description>
   <packaging>jar</packaging>
