@@ -9,9 +9,9 @@ else
 fi
 
 start() {
-    docker volume create jobs-acs-volume
-    docker volume create jobs-db-volume
-    docker volume create jobs-ass-volume
+    docker volume create alfresco-jobs-acs-volume
+    docker volume create alfresco-jobs-db-volume
+    docker volume create alfresco-jobs-ass-volume
     docker-compose -f "$COMPOSE_FILE_PATH" up --build -d
 }
 
@@ -22,9 +22,9 @@ down() {
 }
 
 purge() {
-    docker volume rm -f jobs-acs-volume
-    docker volume rm -f jobs-db-volume
-    docker volume rm -f jobs-ass-volume
+    docker volume rm -f alfresco-jobs-acs-volume
+    docker volume rm -f alfresco-jobs-db-volume
+    docker volume rm -f alfresco-jobs-ass-volume
 }
 
 build() {
