@@ -10,8 +10,7 @@ import org.alfresco.service.transaction.TransactionService;
 import org.alfresco.util.PropertyCheck;
 import org.alfresco.util.VmShutdownListener;
 import org.apache.commons.lang.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -25,7 +24,7 @@ import org.springframework.beans.factory.InitializingBean;
  */
 public abstract class ClusteredExecuter implements InitializingBean, Job {
 
-  private static final Logger LOG = LoggerFactory.getLogger(ClusteredExecuter.class);
+  private static final Logger LOG = Logger.getLogger(ClusteredExecuter.class);
 
   //Default lock ttl 5 min 30 sec
   public static final long DEFAULT_LOCK_TTL = 330000L;
