@@ -9,7 +9,6 @@ import org.alfresco.service.namespace.QName;
 import org.alfresco.service.transaction.TransactionService;
 import org.alfresco.util.PropertyCheck;
 import org.alfresco.util.VmShutdownListener;
-import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.quartz.Job;
@@ -111,7 +110,7 @@ public abstract class ClusteredExecuter implements InitializingBean, Job {
     }
     String lockToken = _lockThreadLocal.get();
 
-    if (StringUtils.isBlank(lockToken)) {
+    if (lockToken == null || lockToken.trim().isEmpty()) {
       throw new IllegalArgumentException("Must provide existing lockToken");
     }
 
@@ -127,7 +126,7 @@ public abstract class ClusteredExecuter implements InitializingBean, Job {
     }
     String lockToken = _lockThreadLocal.get();
 
-    if (StringUtils.isBlank(lockToken)) {
+    if (lockToken == null || lockToken.trim().isEmpty()) {
       throw new IllegalArgumentException("Must provide existing lockToken");
     }
 
@@ -147,7 +146,7 @@ public abstract class ClusteredExecuter implements InitializingBean, Job {
     }
     String lockToken = _lockThreadLocal.get();
 
-    if (StringUtils.isBlank(lockToken)) {
+    if (lockToken == null || lockToken.trim().isEmpty()) {
       try {
         RetryingTransactionCallback<String> txnWork = () -> jobLockService.getLock(getLockQName(), 1000);
 
